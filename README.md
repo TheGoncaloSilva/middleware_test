@@ -27,5 +27,5 @@ The tests were conducted by sending **100** messages with a size of **~4MB** eac
 What we observed, was that Zenoh as the best performance, with a latency of **3.79ms**, ZeroMQ in second, with **5.73ms**. 
 DDS testing was divided in three scenarios:
 * The first with the `large_data` flag, which has **16.51ms** of average latency, however appears to have a large packet loss ratio (>50%).
-* The second which has `SHM` transport and `UDP` enabled, with a shared `IPC`, achieving **16.51ms** of average latency.
+* The second which has `SHM` transport and `UDP` enabled, with a shared `IPC`, achieving **22.69ms** of average latency.
 * The third also has `SHM` transport and `UDP` enabled, but no `IPC` (meaning no shared memory use), achieving **24.21ms** of average latency
