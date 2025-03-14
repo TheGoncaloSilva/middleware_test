@@ -1,0 +1,46 @@
+Creating subscriber.
+Creating participant with profile: large_data_builtin_transports_options
+Press Ctrl+C to stop
+Subscriber matched publisher 1.f.96.8e.a3.0.7.92.0.0.0.0.0.0.1.3
+Received packet 1: Size 4056310, Latency = 28.36 ms
+Received packet 2: Size 4056309, Latency = 16.02 ms
+Received packet 3: Size 4056310, Latency = 15.41 ms
+Received packet 4: Size 4056310, Latency = 17.23 ms
+Received packet 5: Size 4056310, Latency = 16.39 ms
+Received packet 6: Size 4056310, Latency = 15.00 ms
+Received packet 7: Size 4056310, Latency = 15.32 ms
+Received packet 8: Size 4056309, Latency = 19.00 ms
+Received packet 9: Size 4056308, Latency = 14.37 ms
+Received packet 10: Size 4056310, Latency = 18.43 ms
+Received packet 11: Size 4056309, Latency = 17.52 ms
+Received packet 12: Size 4056310, Latency = 13.90 ms
+Received packet 13: Size 4056310, Latency = 17.99 ms
+Received packet 14: Size 4056310, Latency = 15.48 ms
+Received packet 15: Size 4056310, Latency = 16.46 ms
+Received packet 16: Size 4056309, Latency = 17.27 ms
+Received packet 17: Size 4056310, Latency = 18.10 ms
+Received packet 18: Size 4056310, Latency = 18.33 ms
+Received packet 19: Size 4056310, Latency = 14.63 ms
+Received packet 20: Size 4056310, Latency = 18.54 ms
+Received packet 21: Size 4056310, Latency = 16.22 ms
+Received packet 22: Size 4056310, Latency = 15.57 ms
+Received packet 23: Size 4056309, Latency = 14.57 ms
+Received packet 24: Size 4056309, Latency = 18.22 ms
+Received packet 25: Size 4056310, Latency = 15.91 ms
+Received packet 26: Size 4056310, Latency = 14.93 ms
+Received packet 27: Size 4056310, Latency = 14.32 ms
+Received packet 28: Size 4056309, Latency = 17.51 ms
+Received packet 29: Size 4056309, Latency = 16.12 ms
+Received packet 30: Size 4056310, Latency = 14.65 ms
+Received packet 31: Size 4056310, Latency = 14.78 ms
+Received packet 32: Size 4056310, Latency = 16.97 ms
+Received packet 33: Size 4056310, Latency = 16.50 ms
+Received packet 34: Size 4056309, Latency = 14.42 ms
+Received packet 35: Size 4056310, Latency = 17.91 ms
+Received packet 36: Size 4056310, Latency = 14.95 ms
+Received packet 37: Size 4056310, Latency = 14.88 ms
+Received packet 38: Size 4056309, Latency = 15.34 ms
+Subscriber unmatched publisher 1.f.96.8e.a3.0.7.92.0.0.0.0.0.0.1.3
+^CInterrupted!
+Average Latency: 16.51 ms
+Variance Latency: 0.01 ms

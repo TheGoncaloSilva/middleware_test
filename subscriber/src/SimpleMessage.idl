@@ -1,0 +1,4 @@
+struct SimpleMessage
+{
+    string message;
+};

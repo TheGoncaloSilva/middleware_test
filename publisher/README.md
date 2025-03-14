@@ -1,0 +1,1 @@
+Don't forget to login or setup docker to work with gitlab registry: docker login code.nap.av.it.pt:5050
