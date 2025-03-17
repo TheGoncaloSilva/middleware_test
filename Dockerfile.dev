@@ -1,0 +1,52 @@
+# Use a base image compatible with arm64 and amd64
+FROM ubuntu:22.04
+
+# Avoid prompts from apt
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Install all dependencies needed
+RUN apt-get update && apt-get install -y \
+    git \
+    build-essential \
+    cmake \
+    libssl-dev \
+    libasio-dev \
+    libtinyxml2-dev \
+    openjdk-11-jre-headless \
+    python3 \
+    vim \
+    wget \
+    make \
+    iproute2 \
+    net-tools \
+    libpython3-dev \
+    python3-pip \
+    swig \
+    tar \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install the necessary python packages 
+RUN pip3 install -U colcon-common-extensions vcstool
+
+# Create a directory and copy the tarball
+RUN mkdir -p /fastdds
+COPY eProsima_Fast-DDS-v*.tgz /fastdds/
+
+# # Navigate to the directory, extract the tarball, and clean up if needed
+RUN cd /fastdds && tar -xf eProsima_Fast-DDS-v3.1.2-Linux.tgz . && rm eProsima_Fast-DDS-v*.tgz
+
+# Make your script executable and execute it
+RUN chmod +x /fastdds/install.sh && /fastdds/install.sh
+
+# Setup Fast-DDS-python
+RUN mkdir -p /Fast-DDS-python && cd /Fast-DDS-python \
+    && wget https://raw.githubusercontent.com/eProsima/Fast-DDS-python/main/fastdds_python.repos \
+    && mkdir src && vcs import src < fastdds_python.repos \
+    && colcon build
+
+RUN mkdir /new
+
+# Set startup command that enables the use of FastDDS library in Python
+RUN echo 'source /Fast-DDS-python/install/setup.bash' >> ~/.bashrc
+
+WORKDIR /root
